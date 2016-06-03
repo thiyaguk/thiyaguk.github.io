@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1>Hi there! Thank you for visiting my site.</h1>
+
+I'm a Server Techi, Specialized in IT infrastructure and client solutions, hailing from Tamilnadu, India. 
+I wish to pen my work experience on Server Administration techniques as that might help you all. 
+Feel free to write me your comments and thoughts
+
+<h3>Below my Posts</h3>
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
